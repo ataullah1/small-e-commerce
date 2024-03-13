@@ -3,7 +3,7 @@
     "id": "101",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dd6965a65f15.79499097.jpg",
     "book_name": "Beginning Programming For Dummies",
-    "description": "First of all, anyone can learn to program a computer. Computer programming doesn’t require a high IQ and an innate proficiency in advanced mathematics. Computer programming just requires a desire to learn and the patience never to give up.",
+    "description": "First of all, anyone can learn to program a computer. Computer programming doesn’t require a high IQ and an innate ",
     "original_price": 19.99,
     "discount_price": 15.99
   },
@@ -11,7 +11,7 @@
     "id": "102",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dd7cb2d06803.99107363.jpg",
     "book_name": "Foundations Of Python Network Programming",
-    "description": "It is an exciting moment for the Python community. After two decades of careful innovation that saw the language gain features such as context managers, generators, and comprehensions in a careful balance with its focus on remaining simple in both its syntax and its concepts, Python is finally taking off.",
+    "description": "It is an exciting moment for the Python community. After two decades of careful innovation that saw the language gain .",
     "original_price": 25.99,
     "discount_price": 20.99
   },
@@ -19,7 +19,7 @@
     "id": "103",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dd8011d9c185.43348616.jpg",
     "book_name": "Microsoft Access VBA Macro Programming",
-    "description": "Database macro programming has changed enormously over the last 15 years, having gone from Access Basic macros to VBA. Another major change occurred with Office 95, when macros went to VBA modules in a separate environment accessed via the Visual Basic Editor.",
+    "description": "Database macro programming has changed enormously over the last 15 years, having gone from Access Basic macros to VBA. .",
     "original_price": 24.99,
     "discount_price": 19.99
   },
@@ -35,7 +35,7 @@
     "id": "105",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dd8ded8c39c1.50266836.png",
     "book_name": "The Linux Programming Interface",
-    "description": "In this book, I describe the Linux programming interface—the system calls, library functions, and other low-level interfaces provided by Linux, a free implementation of the UNIX operating system. These interfaces are used, directly or indirectly, by every program that runs on Linux.",
+    "description": "In this book, I describe the Linux programming interface—the system calls, library functions, and other runs on Linux.",
     "original_price": 16.99,
     "discount_price": 13.99
   },
@@ -43,7 +43,7 @@
     "id": "106",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dec7dc24e3b7.37309648.jpg",
     "book_name": "VHDL Programming",
-    "description": "This is the fourth version of the book, and this version now not only provides VHDL language coverage but design methodology information as well.",
+    "description": "This is the fourth version of the book, and this version now not only provides VHDL language  information as well.",
     "original_price": 21.99,
     "discount_price": 17.99
   },
@@ -51,7 +51,7 @@
     "id": "107",
     "image": "https://www.junkybooks.com/administrator/bookimages/63e018cfbf1e09.06110306.jpg",
     "book_name": "Functional Programming In C#",
-    "description": "Today, functional programming (FP) is no longer brooding in the research departments of universities; it has become an important and exciting part of mainstream programming.",
+    "description": "Today, functional programming (FP) is no longer brooding in the research departments of universities; it has programming.",
     "original_price": 18.99,
     "discount_price": 14.99
   },
@@ -59,7 +59,7 @@
     "id": "108",
     "image": "https://www.junkybooks.com/administrator/bookimages/63decd22290874.12184484.jpg",
     "book_name": "MATLAB Object-Oriented Programming",
-    "description": "Creating software applications typically involves designing the application data and implementing operations performed on that data. Procedural programs pass data to functions, which perform the necessary operations on the data.",
+    "description": "Creating software applications typically involves designing the application data and implementing operations data.",
     "original_price": 23.99,
     "discount_price": 18.99
   },
@@ -67,7 +67,7 @@
     "id": "109",
     "image": "https://www.junkybooks.com/administrator/bookimages/63ded1cba29f15.30144302.jpg",
     "book_name": "Java Programming Language Handbook",
-    "description": "Introducing Java Java has swept the computer industry with its promise to deliver executable content to the vast sea of computers connected to the World Wide Web.",
+    "description": "Introducing Java Java has swept the computer industry with its promise to deliver executable content to the vast sea Wide Web.",
     "original_price": 14.99,
     "discount_price": 11.99
   },
@@ -75,7 +75,7 @@
     "id": "110",
     "image": "https://www.junkybooks.com/administrator/bookimages/63e01faa570460.84404199.jpg",
     "book_name": "Learn C++ Programming Language",
-    "description": "C++ feels like a new language. That is, I can express my ideas more clearly, more simply, and more directly in C++11 than I could in C++98. Furthermore, the resulting programs are better checked by the compiler and run faster.",
+    "description": "C++ feels like a new language. That is, I can express my ideas more clearly, more simply, and more directly in C++11 run faster.",
     "original_price": 17.99,
     "discount_price": 14.99
   },
@@ -83,7 +83,7 @@
     "id": "111",
     "image": "https://www.junkybooks.com/administrator/bookimages/63e562ae0c5b18.80394032.jpg",
     "book_name": "MySQL For The Internet Of Things",
-    "description": "Internet of Things (IoT) solutions are not nearly as complicated as the name may seem to indicate. Indeed, the IoT is largely another name for what we have already been doing. You may have heard of “connected devices” or “Internet-ready” or even “cloud-enabled.”",
+    "description": "Internet of Things (IoT) solutions are not nearly as. “connected devices” or “Internet-ready” or even “cloud-enabled.”",
     "original_price": 20.99,
     "discount_price": 16.99
   },
@@ -91,7 +91,7 @@
     "id": "112",
     "image": "https://www.junkybooks.com/administrator/bookimages/63dd8011d9c185.43348616.jpg",
     "book_name": "Microsoft Access VBA Macro Programming",
-    "description": "Database macro programming has changed enormously over the last 15 years, having gone from Access Basic macros to VBA. Another major change occurred with Office 95, when macros went to VBA modules in a separate environment accessed via the Visual Basic Editor.",
+    "description": "Database macro programming has changed enormously over the last 15 years, having gone from Access Basic macros to VBA.",
     "original_price": 25.99,
     "discount_price": 20.99
   }

@@ -26,28 +26,35 @@ function App() {
 
             <div className="w-full sm:w-1/2 lg:w-9/12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mx-auto">
               {books.map((book) => {
-                console.log(book);
+                // console.log(book);
                 return (
-                  <div className="p-4 bg-[#b2bec3] rounded-lg hover:scale-[1.03] duration-300 mx-auto max-w-[400px]">
-                    <div className="w-full bg-[#dcdde1] rounded-lg">
-                      <img className="mx-auto" src={book.image} alt="" />
+                  <div
+                    key={book.book_name}
+                    className="p-4 w-full bg-[#b2bec3] rounded-lg hover:scale-[1.03] duration-300 mx-auto max-w-[400px]"
+                  >
+                    <div className="w-full h-[300px] bg-[#dcdde1] rounded-lg">
+                      <img className="mx-auto h-full" src={book.image} alt="" />
                     </div>
-                    <div className="mt-6 space-y-2">
-                      <h1 className="text-2xl font-medium">{book.book_name}</h1>
-                      <p>{book.description}</p>
-                      <p className="text-xl">
-                        Price:{' '}
-                        <span className="font-bold">
-                          <del className="text-red-600">
-                            ${book.original_price}
-                          </del>{' '}
-                          - ${book.discount_price}
-                        </span>
-                      </p>
+                    <div className="mt-2 space-y-2">
+                      <h1 className="text-2xl h-16 font-medium">
+                        {book.book_name}
+                      </h1>
+                      <p className="h-[100px]">{book.description}</p>
+                      <div>
+                        <p className="text-xl">
+                          Price:{' '}
+                          <span className="font-bold">
+                            <del className="text-red-600">
+                              ${book.original_price}
+                            </del>{' '}
+                            - ${book.discount_price}
+                          </span>
+                        </p>
 
-                      <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
-                        Add to card
-                      </button>
+                        <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
+                          Add to card
+                        </button>
+                      </div>
                     </div>
                   </div>
                 );
