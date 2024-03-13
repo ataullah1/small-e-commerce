@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [booksDta, setBookDta] = useState([]);
+  const [booksItem, setbooksItem] = useState([]);
   // console.log(booksDta);
 
   useEffect(() => {
@@ -14,8 +14,20 @@ function App() {
       .then((res) => res.json())
       .then((dta) => setBooks(...books, dta));
   }, []);
-
   // console.log(books);
+  let totalPrice = 0;
+  const handaleBtn = (book) => {
+    if (booksItem.includes(book)) {
+      console.log('sorry');
+    } else {
+      // total = total + booksItem.discount_price;
+      setbooksItem([...booksItem, book]);
+    }
+  };
+  booksItem.map((aa) => (totalPrice += aa.discount_price));
+  const total = totalPrice.toFixed(2);
+  // console.log(total);
+  // console.log(booksItem);
   return (
     <>
       <div>
@@ -55,7 +67,7 @@ function App() {
 
                         <button
                           className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95"
-                          onClick={() => setBookDta(book)}
+                          onClick={() => handaleBtn(book)}
                         >
                           Add to card
                         </button>
@@ -80,7 +92,7 @@ function App() {
                     </tr>
                   </thead>
                   <tbody>
-                    {booksDta.map((book) => {
+                    {booksItem.map((book) => {
                       return (
                         <tr key={book.book_name} className="border-b py-5">
                           <td>{book.book_name}</td>
@@ -94,7 +106,7 @@ function App() {
                   <tfoot>
                     <tr>
                       <th className="text-left">Total:</th>
-                      <th className="text-right pt-3">$000</th>
+                      <th className="text-right pt-3">${total}</th>
                     </tr>
                   </tfoot>
                 </table>
