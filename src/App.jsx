@@ -117,6 +117,15 @@ function App() {
             </div>
           </div>
         </div>
+        <p className="text-center pt-14 pb-6 bg-[#2d3436] mt-9 text-white">
+          Coded by{' '}
+          <a
+            href="https://www.facebook.com/ataullah0"
+            className="text-pink-500 font-medium"
+          >
+            Md Ataullah
+          </a>
+        </p>
       </div>
     </>
   );
