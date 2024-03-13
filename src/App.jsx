@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 function App() {
   const [books, setBooks] = useState([]);
+  const [booksDta, setBookDta] = useState([]);
+  // console.log(booksDta);
 
   useEffect(() => {
     fetch(
@@ -51,7 +53,10 @@ function App() {
                           </span>
                         </p>
 
-                        <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
+                        <button
+                          className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95"
+                          onClick={() => setBookDta(book)}
+                        >
                           Add to card
                         </button>
                       </div>
@@ -75,10 +80,16 @@ function App() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-b py-5">
-                      <td>The Sliding Mr.Bones</td>
-                      <td className="text-right py-3">$100</td>
-                    </tr>
+                    {booksDta.map((book) => {
+                      return (
+                        <tr key={book.book_name} className="border-b py-5">
+                          <td>{book.book_name}</td>
+                          <td className="text-right py-3">
+                            ${book.discount_price}
+                          </td>
+                        </tr>
+                      );
+                    })}
                   </tbody>
                   <tfoot>
                     <tr>
