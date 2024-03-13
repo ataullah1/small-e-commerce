@@ -1,6 +1,19 @@
+import { useEffect } from 'react';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      'https://raw.githubusercontent.com/ataullah1/JavaScript-Note/main/books.json'
+    )
+      .then((res) => res.json())
+      .then((dta) => setBooks(...books, dta));
+  }, []);
+
+  // console.log(books);
   return (
     <>
       <div>
@@ -12,72 +25,33 @@ function App() {
             {/* Left part all books card */}
 
             <div className="w-full sm:w-1/2 lg:w-9/12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 mx-auto">
-              <div className="p-4 bg-[#b2bec3] rounded-lg hover:scale-105 duration-300 mx-auto max-w-[400px]">
-                <div className="w-full h-56 bg-fuchsia-200 rounded-lg">
-                  <img src="" alt="" />
-                </div>
-                <div className="mt-6 space-y-2">
-                  <h1 className="text-2xl font-medium">Books Name</h1>
-                  <p>
-                    Books description Lorem ipsum dolor si Lorem ipsum dolor si
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <p className="text-xl">
-                    Price:{' '}
-                    <span className="font-bold">
-                      <del>$30</del> - $25
-                    </span>
-                  </p>
+              {books.map((book) => {
+                console.log(book);
+                return (
+                  <div className="p-4 bg-[#b2bec3] rounded-lg hover:scale-[1.03] duration-300 mx-auto max-w-[400px]">
+                    <div className="w-full bg-[#dcdde1] rounded-lg">
+                      <img className="mx-auto" src={book.image} alt="" />
+                    </div>
+                    <div className="mt-6 space-y-2">
+                      <h1 className="text-2xl font-medium">{book.book_name}</h1>
+                      <p>{book.description}</p>
+                      <p className="text-xl">
+                        Price:{' '}
+                        <span className="font-bold">
+                          <del className="text-red-600">
+                            ${book.original_price}
+                          </del>{' '}
+                          - ${book.discount_price}
+                        </span>
+                      </p>
 
-                  <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
-                    Add to card
-                  </button>
-                </div>
-              </div>
-              <div className="p-4 bg-[#b2bec3] rounded-lg hover:scale-105 duration-300 mx-auto max-w-[400px]">
-                <div className="w-full h-56 bg-fuchsia-200 rounded-lg">
-                  <img src="" alt="" />
-                </div>
-                <div className="mt-6 space-y-2">
-                  <h1 className="text-2xl font-medium">Books Name</h1>
-                  <p>
-                    Books description Lorem ipsum dolor si Lorem ipsum dolor si
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <p className="text-xl">
-                    Price:{' '}
-                    <span className="font-bold">
-                      <del>$30</del> - $25
-                    </span>
-                  </p>
-
-                  <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
-                    Add to card
-                  </button>
-                </div>
-              </div>
-              <div className="p-4 bg-[#b2bec3] rounded-lg hover:scale-105 duration-300 mx-auto max-w-[400px]">
-                <div className="w-full h-56 bg-fuchsia-200 rounded-lg">
-                  <img src="" alt="" />
-                </div>
-                <div className="mt-6 space-y-2">
-                  <h1 className="text-2xl font-medium">Books Name</h1>
-                  <p>
-                    Books description Lorem ipsum dolor si Lorem ipsum dolor si
-                    Lorem ipsum dolor sit amet.
-                  </p>
-                  <p className="text-xl">
-                    Price:{' '}
-                    <span className="font-bold">
-                      <del>$30</del> - $25
-                    </span>
-                  </p>
-
-                  <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
-                    Add to card
-                  </button>
-                </div>
-              </div>
+                      <button className="bg-green-400 px-5 py-2 rounded-md font-semibold hover:translate-x-3 duration-300 active:scale-95">
+                        Add to card
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
             {/* Right part Add to card */}
